@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let A= parseFloat(prompt("Diga-me o lado A:"))
+        let B= parseFloat(prompt("Diga-me o lado B:"))
+        let C= parseFloat(prompt("Diga-me o lado C:"))
+          
+    //  if((A >= B+C) || (B >= A+C) || (C >= A+B)){
+    //     alert(`Isso não é um triângulo`)
+    //     }
+     
+     
+        if(isNaN(A)){
+        alert(`Isso não é um número!!!`)
+      } 
+      if(isNaN(B)){
+        alert(`Isso não é um número!!!`)
+      }
+      if(isNaN(C)){
+        alert(`Isso não é um número!!!`)
+      }
+      else if((A > B+C) || (B > A+C) || (C > A+B)){
+        alert(`Isso não é um triângulo`)
+        location.reload} 
+     
+
+
+     else if((A == B) && (B == C)){
+        alert(`Triângulo equilátero`)
+    }else if ((A != B) && (A != C) && (C != B)){
+        alert(`Triângulo escaleno`)
+    }else if ((A == B) || (A == C) || (B == C)){
+        alert (`Triângulo isóceles`)
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let notaum, notadois, notatres, notaquatro, media
+        notaum = Number(prompt("Diga sua nota de 1 a 10:"))
+        notadois = Number(prompt("Diga sua nota de 1 a 10:"))
+        notatres = Number(prompt("Diga sua nota de 1 a 10:"))
+        notaquatro = Number(prompt("Diga sua nota de 1 a 10:"))
+        media = (notaum + notadois + notatres + notaquatro) / 4
+
+        if(isNaN(notaum) || notaum > 10 || notaum < 0){
+         alert(`Nota $(notaum)  invalida para o sistema`)
+         location.reload()   
+        } else if(isNaN(notadois) || notadois > 10 || notadois < 0){
+         alert(`Nota $(notadois)  invalida para o sistema`)
+         location.reload()
+        }else if(isNaN(notatres) || notatres > 10 || notatres < 0){
+         alert(`Nota $(notatres)  invalida para o sistema`)
+         location.reload()
+        }else if(isNaN(notaquatro) || notaquatro > 10 || notaquatro < 0){
+         alert(`Nota $(notaum)  invalida para o sistema`)
+         location.reload()
+        }
+        
+        if (media >= 7 && media<= 10) {
+            alert('Aprovado' + media.toFixed(2))
+        } else if(media < 7){
+            alert('Reprovado')
+        }
+
+
+    </script>
+</body>
+
+</html>

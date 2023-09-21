@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let velocidadep, velocidadec, porcentagem, velocidadetotal, vintepct
+
+        porcentagem = (velocidadep * 100) / velocidadetotal
+        
+        velocidadec = parseFloat(prompt("Diga-me a sua velocidade:"))
+        velocidadep = parseFloat(prompt("Diga-me a velocidade permitida da via:")) 
+        vintepct= (velocidadep / 5)
+        velocidadetotal = (vintepct + velocidadep)
+        
+
+        if(isNaN(velocidadec)){
+            alert(`ìsso não é um número!!!`)
+        } else if(isNaN(velocidadep)){
+            alert(`isso não é um número!!!`)
+        }
+
+
+        if(velocidadep >= velocidadec){
+            alert(`Sem multa.`)
+        }else if(velocidadetotal < velocidadec){
+            alert(`multa grave`)
+        }else{
+            alert(`multa leve`)
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>

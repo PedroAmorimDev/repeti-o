@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const numOperarios = parseInt(prompt("Digite o número de operários: ")) 
+    let totalFolhaPagamento = 0 
+    let totalPecas = 0 
+    let totalHomens = 0 
+    let totalMulheres = 0 
+    let maiorSalario = 0 
+    let operarioMaiorSalario = "" 
+
+      for (let i = 0; i < 3;  i++) {
+    const matricula = prompt("Digite a matrícula do operário: ") 
+    const pecas = parseInt(prompt("Digite o número de peças fabricadas: ")) 
+    const sexo = prompt("Digite o sexo do operário (M/F): ") 
+
+    const classe = pecas <= 20 ? 3 : (pecas <= 30 ? 2 : 1) 
+    const salario = 1100 + (classe === 2 ? 0.03 : (classe === 1 ? 0.05 : 0)) * Math.max(0, pecas - (classe === 3 ? 30 : 20)) 
+    totalFolhaPagamento += salario 
+    totalPecas += peças 
+    
+    sexo === 'M' ? totalHomens++ : totalMulheres++ 
+
+    if (salario > maiorSalario) {
+        maiorSalario = salario 
+        operarioMaiorSalario = matricula 
+    }
+}
+
+    const mediaPecasHomens = totalHomens > 0 ? totalPecas / totalHomens : 0 
+     const mediaPecasMulheres = totalMulheres > 0 ? totalPecas / totalMulheres : 0 
+
+     window.alert("Número total de peças fabricadas:", totalPecas) 
+window.alert("Total da folha de pagamento da fábrica: R$", totalFolhaPagamento) 
+window.alert("Média de peças fabricadas pelos homens:", mediaPecasHomens) 
+window.alert("Média de peças fabricadas pelas mulheres:", mediaPecasMulheres) 
+    </script>
+</body>
+</html>

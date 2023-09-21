@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício.02 24/08</title>
+</head>
+<body>
+    <script>
+        let numeroChinchilas
+        let anos
+
+        do {
+            numeroChinchilas = parseInt(prompt("Digite o número de chinchilas:"))
+            if (isNaN(numeroChinchilas) || numeroChinchilas < 2) {
+                window.alert("O número de chinchilas deve ser maior ou igual a 2.")
+            }
+        } while (isNaN(numeroChinchilas) || numeroChinchilas < 2)
+
+        do {
+            anos = parseInt(prompt("Digite o número de anos (deve ser maior que 0):"))
+            if (isNaN(anos) || anos <= 0) {
+                window.alert("O número de anos deve ser maior que 0.")
+            }
+        } while (isNaN(anos) || anos <= 0)
+
+        let taxaCrescimento = 3;
+        let numeroMedioChinchilas = numeroChinchilas;
+
+        for (let i = 2; i <= anos; i++) {
+            numeroMedioChinchilas *= taxaCrescimento;
+            window.alert(`Iteração ${i}: ${numeroMedioChinchilas} chinchilas`)
+        }
+    </script>
+</body>
+</html>
+
+

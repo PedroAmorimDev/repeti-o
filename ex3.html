@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let altura, pesoidealhomem, peso, pesoidealmulher, sexo
+        sexo = prompt("digite H para ou M:")
+        altura = parseFloat(prompt("Diga-me sua altura:"))
+
+        pesoidealhomem = 22 * altura**2
+        
+        if(isNaN(sexo) || sexo != 'H'){
+            alert(`ERRO`)
+        }else{
+        alert(`Seu peso ideal é: ${pesoidealhomem}`)
+        }
+
+
+     
+        // if(isNaN(notaum) || notaum > 10 || notaum < 0){
+        //  alert(`Nota $(notaum)  invalida para o sistema`)
+        //  location.reload()   
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let resto
+        let valordosaque = parseFloat(prompt("Diga-me um número para o saque:"))
+        
+        let valor100 = Math.floor(valordosaque / 100)
+        resto = valordosaque % 100
+        console.log(valor100)
+        
+        let valor50 = Math.floor(resto / 50)
+        resto = valordosaque % 50
+       
+        let valor10 = Math.floor(resto / 10)
+
+       
+
+        if(valordosaque % 10 != 0){
+            alert(`valor invalido para as notas disponiveis`)
+        } else if (isNaN(valordosaque)){
+            alert("isso não é um número.")
+        }else if(valordosaque <  10){
+            alert("saque minimo 10 conto")
+        }else{
+            alert(`Cédulas de 100 reais: ${valor100}\n
+            cedulas 50: ${valor50}\n
+            cedulas 10: ${valor10}`)
+        }   
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero, raizquadrada
+
+        numero = parseFloat (prompt("Diga-me um número para descobrirmos a raiz quadrada:"))
+        raizquadrada = Math.sqrt(numero)
+
+        if (isNaN(numero)){
+            alert("isso não é um número.")
+        }else if(raizquadrada === Math.floor (raizquadrada)){
+            alert(`raiz é ${raizquadrada}`)
+        }else {
+            alert(`não existe raiz para esse numero`)
+        }
+
+         
+    </script>
+</body>
+</html>
